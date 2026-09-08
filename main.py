@@ -17,12 +17,11 @@ def display_current_weather(location):
     response_data = response.json()
     temperature = round(response_data['temperature']['current'])
     condition = response_data['condition']['description']
+    windspeed = response_data['wind']['speed']
 
     print(f"\nThe current temperature in [bold]{location}[/bold] is [bold]{temperature}[/bold]°C, [bold]{condition}[/bold].\n")
+    print(f"\nThe windspeed in [bold]{location}[/bold] is {windspeed} km/hr.")
 
-
-
-    #print (f"Current weather in {origin} is 12°C and 15°C in {destination}.")
 
 #Create a function to generate itinerary. Itinerary Function.
 def generate_itinerary(origin, destination, duration):
